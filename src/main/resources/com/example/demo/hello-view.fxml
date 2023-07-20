@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="963.0" style="-fx-background-color: weight;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.EnregistrementController">
+   <children>
+      <Label layoutX="41.0" layoutY="21.0" prefHeight="28.0" prefWidth="407.0" text="Enregistrement des étudiants " textFill="#5b56b4">
+         <font>
+            <Font name="Consolas Bold" size="21.0" />
+         </font>
+      </Label>
+      <Pane layoutX="22.0" layoutY="68.0" prefHeight="268.0" prefWidth="273.0" style="-fx-border-color: Black; -fx-background-color: ORANGE;">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Label alignment="TOP_CENTER" layoutX="22.0" layoutY="14.0" prefHeight="17.0" prefWidth="156.0" text="Informtaions :">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="54.0" text="NOM">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_nom" layoutX="79.0" layoutY="50.0" prefHeight="25.0" prefWidth="177.0" />
+            <Label layoutX="13.0" layoutY="86.0" text="PRENOM">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_prenom" layoutX="79.0" layoutY="83.0" prefHeight="25.0" prefWidth="177.0" />
+            <Label layoutX="14.0" layoutY="120.0" text="EMAIL">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="155.0" text="GSM">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="190.0" text="CIN">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_cin" layoutX="79.0" layoutY="186.0" prefHeight="25.0" prefWidth="177.0" />
+            <TextField fx:id="txt_gsm" layoutX="79.0" layoutY="151.0" prefHeight="25.0" prefWidth="177.0" />
+            <TextField fx:id="txt_email" layoutX="79.0" layoutY="117.0" prefHeight="25.0" prefWidth="177.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="302.0" layoutY="68.0" prefHeight="268.0" prefWidth="654.0" style="-fx-border-color: Black;">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <children>
+            <TableView fx:id="table" layoutX="9.0" layoutY="11.0" onMouseClicked="#selectionner" prefHeight="246.0" prefWidth="640.0" style="-fx-background-color: weight;">
+              <columns>
+                <TableColumn fx:id="CIN_colonne" prefWidth="101.5999755859375" text="CIN" />
+                  <TableColumn fx:id="NOM_colonne" prefWidth="104.79998779296875" text="NOM" />
+                  <TableColumn fx:id="PRENOM_colonne" prefWidth="104.0" text="PRENOM" />
+                  <TableColumn fx:id="EMAIL_colonne" prefWidth="164.00006103515625" text="EMAIL" />
+                  <TableColumn fx:id="GSM_colonne" prefWidth="165.5999755859375" text="GSM" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Line endX="100.0" layoutX="-68.0" layoutY="15.0" startX="100.00001525878906" startY="39.400001525878906" stroke="#ef7d20" strokeWidth="3.0" />
+      <Button fx:id="btn_supprimer" layoutX="141.0" layoutY="353.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: GREYLIGHT; -fx-border-color: PURPLE;" text="Supprimer" textFill="#ffa700">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_ajouter" layoutX="22.0" layoutY="353.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: GREYLIGHT; -fx-border-color: PURPLE;" text="Ajouter" textFill="#ffa700">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_modifier" layoutX="263.0" layoutY="353.0" mnemonicParsing="false" onAction="#modifier" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: GREYLIGHT; -fx-border-color: PURPLE;" text="Modifier" textFill="#ffa700">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_quitter" layoutX="838.0" layoutY="353.0" mnemonicParsing="false" onAction="#quitter" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: GREYLIGHT; -fx-border-color: PURPLE;" text="Quitter" textFill="#ffa700">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_chercher" layoutX="378.0" layoutY="353.0" mnemonicParsing="false" onAction="#chercher" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: GREYLIGHT; -fx-border-color: PURPLE;" text="Chercher" textFill="#ffa700">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txt_chercher" layoutX="506.0" layoutY="353.0" prefHeight="31.0" prefWidth="310.0" />
+   </children>
+</AnchorPane>
